@@ -1,0 +1,99 @@
+Modulos para necesarios para nuestro proyecto Mobil
+https://reactnavigation.org/docs/getting-started/
+
+//estructuramos la navegacion que va a tener nuestro proyecto
+   npx create-expo-app my-app && cd my-app
+1- npm install @react-navigation/native
+2- expo install react-native-screens react-native-safe-area-context
+3- npm install @react-navigation/native-stack
+//https://www.youtube.com/watch?v=_K9f-OZPPVA
+
+//elementos
+https://reactnativeelements.com/docs/installation#using-expo       https://youtu.be/VE7J0SA1PRQ?t=3140
+4- npm install react-native-elements
+5- npm install react-native-vector-icons  --> https://icons.expo.fyi/
+
+//Modulo de conexion (EN CASO DE USAR BASE DE DATOS RELACIONAL NO RELACIONAL)
+npm install axios 
+
+//en este caso usaremos asyncStorage base de datos local
+6- expo install @react-native-async-storage/async-storage
+https://react-native-async-storage.github.io/async-storage/docs/install/
+//VIDEO REFERENCIA COMO UTILIZAR ASYNCSTORAGE
+https://www.youtube.com/watch?v=oEc6ndf8MXg&list=PLaAoUJDWH9WonhD-ZLyYber1O7LnoI62w
+
+7- expo install expo-sqlite 
+https://www.youtube.com/watch?v=tDrnO2ID2jM
+https://www.youtube.com/watch?v=gzwzdVhGSUQ
+https://www.youtube.com/watch?v=TLmjrpCQKak
+         
+         
+8- creacion de crud
+https://github.com/university-lessons/pdm-expo-sqlite-activerecord/blob/master/App.js
+https://www.youtube.com/watch?v=TLmjrpCQKak
+
+9- Fuentes de letra 
+expo install expo-font 
+
+10- app loading
+expo install expo-app-loading
+
+11- para instalar bien las fuentes o dependencias nativas
+npx react-native link
+
+12-expo install @expo-google-fonts/cookie
+
+https://directory.vercel.app/
+expo install @expo-google-fonts/akronim
+
+https://github.com/expo/google-fonts
+expo install @expo-google-fonts/inter expo-font
+
+
+13- expo install expo-splash-screen  --> pantalla de inicio
+
+https://www.youtube.com/watch?v=i8bni7mUqXE     <--(aqui empieza el map)
+14- gooogle maps o mapa 
+expo install react-native-maps
+https://github.com/react-native-maps/react-native-maps
+
+15- preparar el componente de busqueda
+https://github.com/FaridSafi/react-native-google-places-autocomplete
+npm install react-native-google-places-autocomplete --save
+
+https://youtu.be/i8bni7mUqXE?t=992
+
+15-npm install react-native-maps-directions --legacy-peer-deps
+npm install react-native-maps-directions --force
+
+16- tenemos que ir a google cloud para crear una credencial y luego buscar directions pi y crear una key api
+existen tambien varios tipos de apis
+
+17-crear un archivo .env para crear la key api
+
+18- configurar el archivo babel.config.js
+npm i react-native-dotenv
+
+module.exports = function(api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+    plugins:[
+     [ "module:react-native-dotenv",{
+      "moduleName":"@env",
+      "path":".env",
+      "blacklist":null,
+      "whitelist":null,
+      "safe":false,
+      "allowUndefined":true
+    }]
+    ]
+  };
+};
+
+19- no olvidar agregar el origen y destino de esta forma en MapViewDirections
+https://github.com/bramus/react-native-maps-directions/issues/94
+
+20- npm install expo-location 
+modulo para tomar la locacion nuestra
+yarn add expo-location
